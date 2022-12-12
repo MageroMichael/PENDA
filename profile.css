@@ -1,0 +1,13 @@
+body{
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    font-size: 14px;
+	font-weight: bold;
+	font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    
+}
+.header{
+    font-family:  "Trirong", serif;
+    color: #000;
+    
+}

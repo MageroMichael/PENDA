@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+		<title>Dating Site</title>
+		<style type="text/css" rel="stylesheet">
+			
+			fieldset {
+				background-color: rgb(218, 154, 212);
+				border: 3px solid rgb(170, 61, 192);
+				margin-bottom: 10px;
+				width:720px;
+				
+			}
+			label {
+				width: 180px;
+				display: inline-block;
+				text-align: center;
+				vertical-align: top;
+				margin-bottom: 10px;
+			}
+			.options {
+				width:auto;
+			}
+			.range-low, .range-high {
+				font-size: 14pt;
+				text-align: center;
+				color: white;
+				display: inline-block;
+				width:60px;
+				vertical-align: top;
+			}
+			.range-low {
+				background-color: rgb(203, 93, 236);
+			}
+			.range-high {
+				background-color: rgb(65, 65, 192);
+			}
+			textarea {
+				width: 360px;
+				height:	50px;
+			}
+			label:hover, input:hover {
+				font-size: 20px;
+				font-weight: bold;
+				font-family: 'Times New Roman', Times, serif;
+			}
+		</style>
+		<link rel="stylesheet" href="profile.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1 style="border:2px solid Violet;">Please Enter Your Details</h1>
+		</div>
+		<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data" method="post">
+			<fieldset>
+				<legend>Your Face</legend>
+					<label for="your-image">Your Image:</label><input type="file" required><br />
+					<label for="image-preview">Image Preview:</label><img src="" id="preview"><br />
+			</fieldset>
+			<fieldset>
+				<legend>Your General Details</legend>
+				<label for="name">Name:</label>			<input type="text" name="name" placeholder="Your full name" required><br />
+				<label for="gender">Gender:</label>		<input type="radio" name="gender" value="male" required><label for="gender-male" class="options">Male</label><input type="radio" name="gender" value="female"><label for="gender-female" class="options">Female</label><br />
+				<label for="age">Age:</label>			<input type="number" name="age" required><br />
+				<label for="dob">Date of birth:</label>		<input type="date" name="dob"><br />
+				<label for="fav-color">Favorite color:</label>	<input type="color" name="fav-color" value="#000000"><br />
+				<label for="country">Which country:</label>
+					<select name="country">
+						<option value="no-selection">no selection</option>
+						<option value="ID">Indonesia</option>
+						<option value="IN">India</option>
+						<option value="MY">Malaysia</option>
+						<option value="UK">United Kingdom</option>
+						<option value="KE">Kenya</option>
+						<option value="UG">Uganda</option>
+						<option value="SA">South Africa</option>
+						<option value="CA">Canada</option>
+						<option value="TZ">Tanzania</option>
+						<option value="DB">Dubai</option>
+						<option value="NG">Nigeria</option>
+						<option value="ET">Ethopia</option>
+						<option value="BU">Burundi</option>
+						<option value="FR">France</option>
+					
+					</select>
+			</fieldset>
+			<fieldset>
+				<legend>Your Indicators</legend>
+				<label for="height">Height:</label>
+					<div class="range-low" >Short</div><input type="range" name="height" min="0" max="100"><div class="range-high">Tall</div><br />
+				<label for="salary">Salary:</label>
+					<div class="range-low">Poor</div><input type="range" name="height" min="0" max="100"><div class="range-high">Rich</div>
+			</fieldset>
+			<fieldset>
+				<legend>Your Contact Information</legend>
+				<label for="email">Email:</label><input type="email" name="email" required><br />
+				<label for="mobile">Mobile:</label><input type="tel" name="mobile"><br />
+				<label for="address">Address:</label><textarea name="address"></textarea><br />
+				<label for="method-to-contact">Method to contact you:</label>
+					<input type="checkbox">
+						<label class="options" for="contact-email">Email</label>
+					<input type="checkbox">
+						<label class="options" for="contact-whatsapp">WhatsApp</label>
+					<input type="checkbox">
+						<label  class="options"for="contact-in-app-chat">In-app chat</label>
+			</fieldset>
+			<input type="submit">
+		</form>
+		<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+	</body>
+</html>
